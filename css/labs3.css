@@ -1,5 +1,6 @@
 body{
     background-color: #fafafa;
+    font-family: 'Roboto', sans-serif;
 }
 img{
     max-width: 100%;
@@ -48,7 +49,7 @@ img{
 #left img{
     border-radius: 100%;
 }
-#left h2,#right h2{
+.title{
     text-transform: uppercase;
     font-size: 25px;
     margin-top: 20px;
@@ -60,6 +61,25 @@ img{
     font-size: 16px;
     line-height: 1.5;
 }
-#left #contact,#right #profile{
+.title.no-border{
     border-top: none;
+}
+#sp{
+    color: yellow;
+}
+.ps{
+    color: blue;
+}
+div p span{
+    color: deeppink;
+}
+p span{
+    color: orange;
+}
+span{
+    color:red;
+    text-transform: uppercase;
+}
+span{
+    /*color: green !important;*/
 }
