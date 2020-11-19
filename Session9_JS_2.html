@@ -36,14 +36,42 @@
         //Vi du: Tao 1 so ngau nhien 0 -99 (so may man)
         // Sau do cho nguoi dung nhap 1 so -> kiem tra xem trung giai hay ko
         // tao so ngau nhien
-        var rd = parseInt(Math.random()*100);// 0<=rd<100
-        console.log(rd);
-        var luckyNumber = prompt("Nhap so may man:");
-        luckyNumber = parseInt(luckyNumber);
-        if(luckyNumber == rd){
-            alert("Chuc mung ban da trung giai");
-        }else{
-            alert("Chuc may man vao ngay mai");
+        // var rd = parseInt(Math.random()*100);// 0<=rd<100
+        // console.log(rd);
+        // var luckyNumber = prompt("Nhap so may man:");
+        // luckyNumber = parseInt(luckyNumber);
+        // if(luckyNumber == rd){
+        //     alert("Chuc mung ban da trung giai");
+        // }else{
+        //     alert("Chuc may man vao ngay mai");
+        // }
+
+        // Vietlot
+        var vl =[];
+        do{
+            var n =  parseInt(Math.random()*46);
+            if(!vl.includes(n)){
+                vl.push(n);
+            }
+        }while (vl.length<5);
+        console.log(vl);
+        // chon 5 so 0-45
+        var ln = [];
+        do {
+            var n = prompt("Chon 1 so:");
+            n = parseInt(n);
+            if(!isNaN(n) && n>=0 && n<=45 && !ln.includes(n)){
+                ln.push(n);
+            }
+        }while (ln.length<5);
+        var count = 0;
+        ln.map((e)=>{
+           if(vl.includes(e)){
+               count++;
+           }
+        });
+        if(count==5 ){
+            alert("chuc mung ban da trung 100 ty");
         }
     </script>
 </body>
