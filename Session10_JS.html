@@ -22,17 +22,22 @@
         }
         setTimeout(demo,3000);
         var f = true;
+        var t=0;
         function Img() {
             var x = document.getElementById("nt");
-            if(f){
-                x.style.display = "block";
-                f = false;
-            }else {
-                x.style.display = "none";
-                f = true;
-            }
+            // if(f){
+            //     x.style.display = "block";
+            //     f = false;
+            // }else {
+            //     x.style.display = "none";
+            //     f = true;
+            // }
+            t+=5;
+            x.style.transform = "rotate("+t+"deg)";
+            if(t>=360*5) // quay du 5 vong thi dung + 1 doan di den phan thuong
+                clearInterval(ss);
         }
-        //setInterval(Img,1000);
+        var ss = setInterval(Img,10);
     </script>
 </body>
 </html>
