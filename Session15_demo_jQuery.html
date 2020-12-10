@@ -40,8 +40,8 @@
             <h1 >Tiêu đề</h1>
             <p class="page">Đoạn văn... 1</p>
             <p class="page">Đoạn văn... 2</p>
-            <button type="button" onclick="show()">Show</button>
-            <button type="button" onclick="hide()">Hide</button>
+            <button type="button" class="showbtn">Show</button>
+            <button type="button" class="hidebtn">Hide</button>
             <button type="button" onclick="toggle()">ON/OFF</button>
             <div class="box"></div>
             <h1 >Tiêu đề</h1>
@@ -55,6 +55,11 @@
     </section>
 
 <script type="text/javascript">
+    var sbtn = $(".showbtn");
+    sbtn.bind("click",show);// khai bao su kien cua html trong js
+    $(".hidebtn").bind("click",function () {
+        $(".box").hide();
+    })
     // su kien khi nguoi dung cuon scoll man hinh
     window.onscroll = function () {
         var v = $(window).scrollTop();// chi so scroll cua man hinh
